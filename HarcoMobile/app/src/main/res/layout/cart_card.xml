@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="10dp"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/appColor"
+    app:cardBackgroundColor="@color/card"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@color/card"
+        >
+
+        <ImageView
+            android:id="@+id/cartImageIV"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/app_name"
+            android:padding="0dp"
+            android:src="@drawable/ps" />
+
+        <TextView
+            android:id="@+id/cartNameTV"
+            android:layout_toEndOf="@id/cartImageIV"
+            android:text="Device 1"
+            android:textColor="@color/black"
+            android:fontFamily="@font/font1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"/>
+        <TextView
+            android:id="@+id/cartPriceTV"
+            android:layout_below="@id/cartNameTV"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/cartImageIV"
+            android:fontFamily="@font/font1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price: Rp 1.000.000"
+            android:drawablePadding="4dp"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/cartQuantityTV"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/font1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_below="@+id/cartPriceTV"
+            android:layout_toEndOf="@+id/cartImageIV"
+            android:layout_marginLeft="20dp"
+            android:drawablePadding="4dp"
+            android:text="Quantity: 3" />
+        <TextView
+            android:id="@+id/cartTotalPriceTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_below="@+id/cartQuantityTV"
+            android:fontFamily="@font/font1"
+            android:layout_toEndOf="@+id/cartImageIV"
+            android:layout_marginLeft="20dp"
+            android:drawablePadding="4dp"
+            android:text="TotalPrice: Rp 3.000.000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/cartImageIV"
+            >
+
+            <Button
+                android:id="@+id/cartUpdateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:text="UPDATE"
+                android:fontFamily="@font/font1"
+                app:cornerRadius="30dp"
+                android:backgroundTint="#B8DA69"
+                android:textColor="@color/black"
+                />
+
+            <Button
+                android:id="@+id/cartDeleteBtn"
+                android:backgroundTint="#A11919"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="DELETE"
+                android:fontFamily="@font/font1"
+                app:cornerRadius="30dp"
+                android:layout_weight="1"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

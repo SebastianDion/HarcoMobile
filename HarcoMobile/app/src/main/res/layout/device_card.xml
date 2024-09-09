@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="10dp"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/appColor"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@color/card"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/catImageIV"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/app_name"
+
+            android:padding="0dp"
+            android:src="@drawable/ps" />
+
+        <TextView
+            android:id="@+id/catNameTV"
+            android:layout_toEndOf="@id/catImageIV"
+            android:text="Device 1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/catPriceTV"
+            android:layout_below="@id/catNameTV"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/catImageIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 1.000.000"
+            android:fontFamily="@font/font1"
+            android:drawablePadding="4dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/catDescTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_below="@+id/catPriceTV"
+            android:layout_toEndOf="@+id/catImageIV"
+            android:layout_marginLeft="20dp"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/font1"
+            android:minLines="3"
+            android:text="Rsfdadfas"
+             />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

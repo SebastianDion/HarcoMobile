@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/baseline_catching_pokemon_24"
+        android:label=" "
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JollyCat"
+        tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD3cDl3ReruSethGZwOzLHT7nITfl7quiQ" />
+
+        <activity
+            android:name=".ActivityCatsDetailPage"
+            android:exported="false"
+            android:theme="@style/Theme.JollyCat.NoActionBar"/>
+        <activity
+            android:name=".Global"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMainPage"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.JollyCat.NoActionBar"/>
+        <activity
+            android:name=".ActivityRegister"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.JollyCat.NoActionBar" />
+        <activity
+            android:name=".ActivityLogin"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.JollyCat.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
